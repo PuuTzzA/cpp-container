@@ -1,0 +1,14 @@
+{
+    "name": "My C++ Dev",
+    "dockerFile": "Dockerfile",
+    "mounts": [
+        "source=${localWorkspaceFolder}/,target=/workspace,type=bind"
+    ],
+    "settings": {
+        "C_Cpp.default.compilerPath": "/usr/bin/g++",
+        "C_Cpp.default.includePath": [
+            "/usr/include",
+            "/usr/local/include"
+        ]
+    }
+}

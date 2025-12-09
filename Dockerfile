@@ -5,6 +5,7 @@ RUN apt-get -y update && apt-get install -y
 # Install required dependencies
 # <-
 RUN apt-get -y install cmake libgflags-dev libatlas-base-dev libeigen3-dev libsuitesparse-dev build-essential g++ gdb python3-dev autotools-dev libicu-dev libbz2-dev libboost-all-dev libflann-dev libfreeimage3 libfreeimage-dev lz4
+RUN apt install libopencv-dev
 # ->
 
 # Configure GCC 9

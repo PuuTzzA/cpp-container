@@ -12,7 +12,7 @@ The first step is installing docker: https://docs.docker.com/engine/install/
 The following command will take some time. It will create a Docker image and install and compile the required dependencies.
 
 ```bash
-docker build . -t 3dsmc
+docker build . -t sfm
 ```
 
 ## Start the development environment
@@ -28,7 +28,7 @@ docker-compose up
 
 In the web browser open the following link: http://localhost:8443/
 
-Alternatively, you can access the CLI of the environment by executing: `docker exec -it 3dsmc /bin/bash`
+Alternatively, you can access the CLI of the environment by executing: `docker exec -it sfm /bin/bash`
 
 ### Directories
 

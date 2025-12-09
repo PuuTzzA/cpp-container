@@ -2,8 +2,8 @@
 version: "2.1"
 services:
   code-server:
-    image: 3dsmc
-    container_name: 3dsmc
+    image: sfm
+    container_name: sfm
     environment:
       - PUID=1000
       - PGID=1000

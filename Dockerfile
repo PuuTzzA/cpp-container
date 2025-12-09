@@ -48,4 +48,4 @@ RUN apt-get -y install libceres-dev
 
 WORKDIR /config/workspace/
 
-# Build with: docker build . -t 3dsmc
+# Build with: docker build . -t sfm

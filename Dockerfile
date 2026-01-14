@@ -4,8 +4,17 @@ RUN apt-get -y update && apt-get install -y
 
 # Install required dependencies
 # <-
-RUN apt-get -y install cmake libgflags-dev libatlas-base-dev libeigen3-dev libsuitesparse-dev build-essential g++ gdb python3-dev autotools-dev libicu-dev libbz2-dev libboost-all-dev libflann-dev libfreeimage3 libfreeimage-dev lz4
-RUN apt-get -y install libopencv-dev
+RUN apt-get update && apt-get -y install \
+    cmake libgflags-dev libatlas-base-dev libeigen3-dev libsuitesparse-dev \
+    build-essential g++ gdb python3-dev autotools-dev libicu-dev \
+    libbz2-dev libboost-all-dev libflann-dev libfreeimage3 libfreeimage-dev \
+    lz4 libopencv-dev \
+    libjpeg-turbo8-dev libturbojpeg0-dev wget
+
+# Install LodePNG (Download directly to /usr/local/include/src)
+# This makes lodepng.h available globally, and puts lodepng.cpp where you can find it.
+RUN wget https://raw.githubusercontent.com/lvandeve/lodepng/master/lodepng.h -O /usr/local/include/lodepng.h
+RUN wget https://raw.githubusercontent.com/lvandeve/lodepng/master/lodepng.cpp -O /usr/local/include/lodepng.cpp
 # ->
 
 # Configure GCC 9
